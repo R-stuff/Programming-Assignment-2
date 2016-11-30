@@ -14,8 +14,7 @@ The first function, makeVector creates a special "vector", which is really a lis
 3. set the value of the mean
 4. get the value of the mean
 
-makeVector <- function(x = numeric()) {
-
+       makeVector <- function(x = numeric()) {
         m <- NULL
         set <- function(y) {
         
@@ -32,8 +31,8 @@ makeVector <- function(x = numeric()) {
 
 The following function calculates the mean of the special "vector" created with the above function. However, it first checks to see if the mean has already been calculated. If so, it gets the mean from the cache and skips the computation. Otherwise, it calculates the mean of the data and sets the value of the mean in the cache via the setmean function.
 
-cachemean <- function(x, ...) {
-        m <- x$getmean()
+    cachemean <- function(x, ...) {
+         m <- x$getmean()
         if(!is.null(m)) {
                 message("getting cached data")
                 return(m)
